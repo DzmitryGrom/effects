@@ -5,11 +5,12 @@ body,html {
 	overflow: hidden;
 	cursor: none;
 }
-.wrapper, .phone{
+.wrapper, .phone, .phone__viewport {
 	background-repeat: no-repeat;
-
 }
-.wrapper, .phone, .phone__img {
+.phone, .phone:before, .phone__viewport {
+	position: absolute;
+	display: inline-block;
 }
 .wrapper {
 	height: 100%;
@@ -18,20 +19,16 @@ body,html {
 }
 .phone {
 	background-image: url(../i/phone.png);
-	position: absolute;
 	left: 50%;
 	top: 50%;
 	z-index: 1;
-	display: inline-block;
 	width: 170px;
     height: 355px;
 }
 .phone:before {
 	content: '';
     background-image: url(../i/phone.png);
-	position: absolute;
     z-index: 1;
-    display: inline-block;
     width: 190px;
     height: 400px;
     left: -12px;
@@ -41,10 +38,8 @@ body,html {
 }
 .phone__viewport {
 	overflow: hidden;
-    position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
     top: 0;
-    background-repeat: no-repeat;
 }
